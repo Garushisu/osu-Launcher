@@ -38,6 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mamesosu = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(593, 366);
+            this.button3.Location = new System.Drawing.Point(615, 370);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button3.Size = new System.Drawing.Size(137, 49);
@@ -129,6 +130,19 @@
             this.textBox1.Text = "with Akatsuki Patcher";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(723, 12);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(35, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "S";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // OsuRun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -137,6 +151,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(764, 431);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mamesosu);
             this.Controls.Add(this.replayMoves);
@@ -167,6 +182,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button mamesosu;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

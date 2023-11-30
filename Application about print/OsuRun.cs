@@ -95,5 +95,17 @@ namespace Application_about_print
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            settings settings = new settings();
+            settings.Show();
+            
+        }
     }
 }
