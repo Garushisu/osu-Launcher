@@ -35,7 +35,7 @@ namespace Application_about_print
             Process.Start(psi);
         }
 
-        private void official_Click(object sender, EventArgs e)
+        public void official_Click(object sender, EventArgs e)
         {
             ProcessStartInfo psi = new ProcessStartInfo("G:\\osu!\\osu!.exe");
             Process.Start(psi);

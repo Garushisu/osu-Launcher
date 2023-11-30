@@ -17,17 +17,26 @@ namespace Application_about_print
             InitializeComponent();
         }
 
+        OsuRun OsuRunInstance = new OsuRun();
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            firstName.Text = Properties.Settings.Default.Name1;
+            firstPath.Text = Properties.Settings.Default.Path1;
+            secondName.Text = Properties.Settings.Default.Name2;
+            secondPath.Text = Properties.Settings.Default.Path2;
+            thirdName.Text = Properties.Settings.Default.Name3;
+            thirdPath.Text = Properties.Settings.Default.Path3;
+            
+
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Editing_Load(object sender, EventArgs e)
         {
 
         }
@@ -70,6 +79,24 @@ namespace Application_about_print
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Name1 = firstName.Text;
+            Properties.Settings.Default.Path1 = firstPath.Text;
+            Properties.Settings.Default.Name2 = secondName.Text;
+            Properties.Settings.Default.Path2 = secondPath.Text;
+            Properties.Settings.Default.Name3 = thirdName.Text;
+            Properties.Settings.Default.Path3 = thirdPath.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        
+        private void Settings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OsuRunInstance.official.Name = Properties.Settings.Default.Name1;
+            ShowDialog();
         }
     }
 }

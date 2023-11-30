@@ -38,7 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mamesosu = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.settingButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +72,6 @@
             this.official.Name = "official";
             this.official.Size = new System.Drawing.Size(261, 65);
             this.official.TabIndex = 3;
-            this.official.Text = "Run osu! official server";
             this.official.UseVisualStyleBackColor = true;
             this.official.Click += new System.EventHandler(this.official_Click);
             // 
@@ -130,18 +129,19 @@
             this.textBox1.Text = "with Akatsuki Patcher";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // settingButton
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(723, 12);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(35, 34);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "S";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.settingButton.BackgroundImage = global::Application_about_print.Properties.Resources._26565;
+            this.settingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingButton.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.settingButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.settingButton.Location = new System.Drawing.Point(723, 12);
+            this.settingButton.Name = "settingButton";
+            this.settingButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.settingButton.Size = new System.Drawing.Size(35, 34);
+            this.settingButton.TabIndex = 9;
+            this.settingButton.UseVisualStyleBackColor = true;
+            this.settingButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // OsuRun
             // 
@@ -151,7 +151,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(764, 431);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.settingButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mamesosu);
             this.Controls.Add(this.replayMoves);
@@ -176,13 +176,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button mamesakatsuki;
-        private System.Windows.Forms.Button official;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox replayMoves;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button mamesosu;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button settingButton;
+        internal System.Windows.Forms.Button official;
     }
 }
 

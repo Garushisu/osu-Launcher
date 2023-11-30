@@ -260,6 +260,7 @@
             this.button4.TabIndex = 27;
             this.button4.Text = "Save";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // settings
             // 
@@ -290,7 +291,8 @@
             this.MinimizeBox = false;
             this.Name = "settings";
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.Editing_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settings_FormClosing);
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

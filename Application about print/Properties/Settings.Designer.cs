@@ -26,12 +26,72 @@ namespace Application_about_print.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string official {
+        public string Name1 {
             get {
-                return ((string)(this["official"]));
+                return ((string)(this["Name1"]));
             }
             set {
-                this["official"] = value;
+                this["Name1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Path1 {
+            get {
+                return ((string)(this["Path1"]));
+            }
+            set {
+                this["Path1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Name2 {
+            get {
+                return ((string)(this["Name2"]));
+            }
+            set {
+                this["Name2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Path2 {
+            get {
+                return ((string)(this["Path2"]));
+            }
+            set {
+                this["Path2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Name3 {
+            get {
+                return ((string)(this["Name3"]));
+            }
+            set {
+                this["Name3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Path3 {
+            get {
+                return ((string)(this["Path3"]));
+            }
+            set {
+                this["Path3"] = value;
             }
         }
     }
