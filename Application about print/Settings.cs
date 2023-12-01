@@ -95,8 +95,23 @@ namespace Application_about_print
         
         private void Settings_FormClosing(object sender, FormClosingEventArgs e)
         {
-            OsuRunInstance.official.Name = Properties.Settings.Default.Name1;
-            ShowDialog();
+            DialogResult result = MessageBox.Show("保存", "保存しますか？", MessageBoxButtons.YesNoCancel);
+            if(result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Properties.Settings.Default.Name1 = firstName.Text;
+                Properties.Settings.Default.Path1 = firstPath.Text;
+                Properties.Settings.Default.Name2 = secondName.Text;
+                Properties.Settings.Default.Path2 = secondPath.Text;
+                Properties.Settings.Default.Name3 = thirdName.Text;
+                Properties.Settings.Default.Path3 = thirdPath.Text;
+                Properties.Settings.Default.Save();
+            }else if(result == System.Windows.Forms.DialogResult.No)
+            {
+                
+            } else
+            {
+                Close();
+            }
         }
     }
 }
