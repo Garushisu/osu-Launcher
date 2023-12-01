@@ -16,13 +16,6 @@ namespace Application_about_print
         [STAThread]
         static void Main()
         {
-            Mutex app_mutex = new Mutex(false, "MYSOFTWARE_001");
-                
-            if (app_mutex.WaitOne(0, false) == false)
-            {
-                
-                return;
-            }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.firstName = new System.Windows.Forms.TextBox();
             this.thirdName = new System.Windows.Forms.TextBox();
             this.secondName = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstName
@@ -63,7 +63,7 @@
             this.thirdName.Location = new System.Drawing.Point(67, 243);
             this.thirdName.Name = "thirdName";
             this.thirdName.Size = new System.Drawing.Size(152, 19);
-            this.thirdName.TabIndex = 1;
+            this.thirdName.TabIndex = 4;
             this.thirdName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // secondName
@@ -79,7 +79,7 @@
             this.firstPath.Location = new System.Drawing.Point(67, 105);
             this.firstPath.Name = "firstPath";
             this.firstPath.Size = new System.Drawing.Size(321, 19);
-            this.firstPath.TabIndex = 3;
+            this.firstPath.TabIndex = 1;
             this.firstPath.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // secondPath
@@ -87,7 +87,7 @@
             this.secondPath.Location = new System.Drawing.Point(67, 188);
             this.secondPath.Name = "secondPath";
             this.secondPath.Size = new System.Drawing.Size(321, 19);
-            this.secondPath.TabIndex = 4;
+            this.secondPath.TabIndex = 3;
             this.secondPath.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // thirdPath
@@ -107,6 +107,7 @@
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 8;
+            this.textBox9.TabStop = false;
             this.textBox9.Text = "Third";
             // 
             // textBox7
@@ -118,6 +119,7 @@
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 9;
+            this.textBox7.TabStop = false;
             this.textBox7.Text = "Second";
             // 
             // textBox8
@@ -129,6 +131,7 @@
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 10;
+            this.textBox8.TabStop = false;
             this.textBox8.Text = "First";
             // 
             // textBox10
@@ -140,6 +143,7 @@
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(173, 32);
             this.textBox10.TabIndex = 11;
+            this.textBox10.TabStop = false;
             this.textBox10.Text = "Settings";
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
@@ -153,6 +157,7 @@
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(49, 19);
             this.textBox11.TabIndex = 18;
+            this.textBox11.TabStop = false;
             this.textBox11.Text = "Path:";
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
@@ -167,6 +172,7 @@
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(49, 19);
             this.textBox12.TabIndex = 19;
+            this.textBox12.TabStop = false;
             this.textBox12.Text = "Name:";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
@@ -181,6 +187,7 @@
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(49, 19);
             this.textBox13.TabIndex = 21;
+            this.textBox13.TabStop = false;
             this.textBox13.Text = "Name:";
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -194,6 +201,7 @@
             this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(49, 19);
             this.textBox14.TabIndex = 20;
+            this.textBox14.TabStop = false;
             this.textBox14.Text = "Path:";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -207,6 +215,7 @@
             this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(49, 19);
             this.textBox15.TabIndex = 23;
+            this.textBox15.TabStop = false;
             this.textBox15.Text = "Name:";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
@@ -221,6 +230,7 @@
             this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(49, 19);
             this.textBox16.TabIndex = 22;
+            this.textBox16.TabStop = false;
             this.textBox16.Text = "Path:";
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -232,6 +242,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Blowse...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.path1_Click);
             // 
             // button2
             // 
@@ -241,6 +252,7 @@
             this.button2.TabIndex = 25;
             this.button2.Text = "Blowse...";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.path2_Click);
             // 
             // button3
             // 
@@ -250,24 +262,13 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "Blowse...";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.button4.Location = new System.Drawing.Point(384, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 44);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button3.Click += new System.EventHandler(this.path3_Click);
             // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 312);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -287,6 +288,7 @@
             this.Controls.Add(this.secondName);
             this.Controls.Add(this.thirdName);
             this.Controls.Add(this.firstName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "settings";
@@ -319,6 +321,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }

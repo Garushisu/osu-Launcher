@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OsuRun));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mamesakatsuki = new System.Windows.Forms.Button();
-            this.official = new System.Windows.Forms.Button();
+            this.third = new System.Windows.Forms.Button();
+            this.first = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.replayMoves = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mamesosu = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.second = new System.Windows.Forms.Button();
             this.settingButton = new System.Windows.Forms.Button();
+            this.reload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,26 +54,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // mamesakatsuki
+            // third
             // 
-            this.mamesakatsuki.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.mamesakatsuki.Location = new System.Drawing.Point(37, 340);
-            this.mamesakatsuki.Name = "mamesakatsuki";
-            this.mamesakatsuki.Size = new System.Drawing.Size(261, 65);
-            this.mamesakatsuki.TabIndex = 2;
-            this.mamesakatsuki.Text = "Run osu! Mames server";
-            this.mamesakatsuki.UseVisualStyleBackColor = true;
-            this.mamesakatsuki.Click += new System.EventHandler(this.mames_Click);
+            this.third.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.third.Location = new System.Drawing.Point(37, 340);
+            this.third.Name = "third";
+            this.third.Size = new System.Drawing.Size(261, 65);
+            this.third.TabIndex = 2;
+            this.third.UseVisualStyleBackColor = true;
+            this.third.Click += new System.EventHandler(this.third_Click);
             // 
-            // official
+            // first
             // 
-            this.official.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.official.Location = new System.Drawing.Point(37, 197);
-            this.official.Name = "official";
-            this.official.Size = new System.Drawing.Size(261, 65);
-            this.official.TabIndex = 3;
-            this.official.UseVisualStyleBackColor = true;
-            this.official.Click += new System.EventHandler(this.official_Click);
+            this.first.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.first.Location = new System.Drawing.Point(37, 197);
+            this.first.Name = "first";
+            this.first.Size = new System.Drawing.Size(261, 65);
+            this.first.TabIndex = 3;
+            this.first.UseVisualStyleBackColor = true;
+            this.first.Click += new System.EventHandler(this.first_Click);
             // 
             // button3
             // 
@@ -108,26 +107,15 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // mamesosu
+            // second
             // 
-            this.mamesosu.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.mamesosu.Location = new System.Drawing.Point(37, 268);
-            this.mamesosu.Name = "mamesosu";
-            this.mamesosu.Size = new System.Drawing.Size(261, 65);
-            this.mamesosu.TabIndex = 7;
-            this.mamesosu.Text = "Run osu! Mames server";
-            this.mamesosu.UseVisualStyleBackColor = true;
-            this.mamesosu.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(166, 407);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 12);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "with Akatsuki Patcher";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.second.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.second.Location = new System.Drawing.Point(37, 268);
+            this.second.Name = "second";
+            this.second.Size = new System.Drawing.Size(261, 65);
+            this.second.TabIndex = 7;
+            this.second.UseVisualStyleBackColor = true;
+            this.second.Click += new System.EventHandler(this.second_Click);
             // 
             // settingButton
             // 
@@ -143,21 +131,36 @@
             this.settingButton.UseVisualStyleBackColor = true;
             this.settingButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // reload
+            // 
+            this.reload.BackgroundImage = global::Application_about_print.Properties.Resources.reload1;
+            this.reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reload.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.reload.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.reload.Location = new System.Drawing.Point(723, 52);
+            this.reload.Name = "reload";
+            this.reload.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.reload.Size = new System.Drawing.Size(35, 34);
+            this.reload.TabIndex = 10;
+            this.reload.UseVisualStyleBackColor = true;
+            this.reload.Visible = false;
+            this.reload.Click += new System.EventHandler(this.reload_Click);
+            // 
             // OsuRun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = global::Application_about_print.Properties.Resources.BGImage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(764, 431);
+            this.Controls.Add(this.reload);
             this.Controls.Add(this.settingButton);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.mamesosu);
+            this.Controls.Add(this.second);
             this.Controls.Add(this.replayMoves);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.official);
-            this.Controls.Add(this.mamesakatsuki);
+            this.Controls.Add(this.first);
+            this.Controls.Add(this.third);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -165,6 +168,7 @@
             this.MinimizeBox = false;
             this.Name = "OsuRun";
             this.Text = "osu! loader";
+            this.Activated += new System.EventHandler(this.reload_Click);
             this.Load += new System.EventHandler(this.OsuRun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -175,14 +179,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button mamesakatsuki;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox replayMoves;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button mamesosu;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button settingButton;
-        internal System.Windows.Forms.Button official;
+        private System.Windows.Forms.Button reload;
+        public System.Windows.Forms.Button first;
+        public System.Windows.Forms.Button third;
+        public System.Windows.Forms.Button second;
     }
 }
 

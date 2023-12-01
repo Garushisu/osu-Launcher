@@ -121,4 +121,13 @@
   <data name="26565" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\26565.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reload1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reload1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BGImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BGImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

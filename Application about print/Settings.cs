@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,12 +16,24 @@ namespace Application_about_print
         public settings()
         {
             InitializeComponent();
+
+            Mutex app_mutex = new Mutex(false, "MYSOFTWARE_001");
+
+            if (app_mutex.WaitOne(0, false) == false)
+            {
+
+                return;
+            }
         }
+
+
 
         OsuRun OsuRunInstance = new OsuRun();
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             firstName.Text = Properties.Settings.Default.Name1;
             firstPath.Text = Properties.Settings.Default.Path1;
             secondName.Text = Properties.Settings.Default.Name2;
@@ -80,9 +93,10 @@ namespace Application_about_print
         {
 
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        
+        private void Settings_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             Properties.Settings.Default.Name1 = firstName.Text;
             Properties.Settings.Default.Path1 = firstPath.Text;
             Properties.Settings.Default.Name2 = secondName.Text;
@@ -90,29 +104,28 @@ namespace Application_about_print
             Properties.Settings.Default.Name3 = thirdName.Text;
             Properties.Settings.Default.Path3 = thirdPath.Text;
             Properties.Settings.Default.Save();
+
         }
 
-        
-        private void Settings_FormClosing(object sender, FormClosingEventArgs e)
+        private void path1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("保存", "保存しますか？", MessageBoxButtons.YesNoCancel);
-            if(result == System.Windows.Forms.DialogResult.Yes)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Setting the exe file.";
+            openFileDialog.Filter = "file (*.exe) | *.exe";
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Properties.Settings.Default.Name1 = firstName.Text;
-                Properties.Settings.Default.Path1 = firstPath.Text;
-                Properties.Settings.Default.Name2 = secondName.Text;
-                Properties.Settings.Default.Path2 = secondPath.Text;
-                Properties.Settings.Default.Name3 = thirdName.Text;
-                Properties.Settings.Default.Path3 = thirdPath.Text;
-                Properties.Settings.Default.Save();
-            }else if(result == System.Windows.Forms.DialogResult.No)
-            {
-                Close();
-            } else
-            {
-                this.Close();
+                openFileDialog.FileName = firstPath.Text;
+                openFileDialog.FileName = Properties.Settings.Default.Path1;
             }
-                
+        }
+
+        private void path2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void path3_Click(object sender, EventArgs e)
+        {
 
         }
     }

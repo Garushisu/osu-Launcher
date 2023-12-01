@@ -49,8 +49,38 @@ namespace Application_about_print
         private void OsuRun_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             ProcessStartInfo psi = new ProcessStartInfo("F:\\フォルダー\\OpenTabletDriver.win-x64\\OpenTabletDriver.Daemon.exe");
             Process.Start(psi);
+
+            first.Text = Properties.Settings.Default.Name1;
+            second.Text = Properties.Settings.Default.Name2;
+            third.Text = Properties.Settings.Default.Name3;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name1))
+            {
+                first.Visible = true;
+            }
+            else
+            {
+                first.Visible = false;
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name2))
+            {
+                second.Visible = true;
+            }
+            else
+            {
+                second.Visible = false;
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name3))
+            {
+                third.Visible = true;
+            }
+            else
+            {
+                third.Visible = false;
+            }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -106,6 +136,56 @@ namespace Application_about_print
             settings settings = new settings();
             settings.Show();
             
+            
+        }
+
+        private void reload_Click(object sender, EventArgs e)
+        {
+            first.Text = Properties.Settings.Default.Name1;
+            second.Text = Properties.Settings.Default.Name2;
+            third.Text = Properties.Settings.Default.Name3;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name1))
+            {
+                first.Visible = true;
+            }
+            else
+            {
+                first.Visible = false;
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name2))
+            {
+                second.Visible = true;
+            }
+            else
+            {
+                second.Visible = false;
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Name3))
+            {
+                third.Visible = true;
+            }
+            else
+            {
+                third.Visible = false;
+            }
+        }
+
+        private void first_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+            Process.Start(psi);
+        }
+
+        private void second_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+            Process.Start(psi);
+        }
+
+        private void third_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+            Process.Start(psi);
         }
     }
 }
