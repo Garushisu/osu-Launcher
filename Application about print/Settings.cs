@@ -107,11 +107,13 @@ namespace Application_about_print
                 Properties.Settings.Default.Save();
             }else if(result == System.Windows.Forms.DialogResult.No)
             {
-                
+                Close();
             } else
             {
-                Close();
+                this.Close();
             }
+                
+
         }
     }
 }
