@@ -77,6 +77,16 @@ namespace Application_about_print
                 third.Visible = false;
             }
 
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.OTD))
+            {
+                ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.OTD);
+                Process.Start(psi);
+            } else
+            {
+
+            }
+            
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

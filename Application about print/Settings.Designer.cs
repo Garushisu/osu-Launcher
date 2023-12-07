@@ -56,6 +56,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.OTD = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -313,10 +314,10 @@
             this.textBox1.Location = new System.Drawing.Point(12, 350);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
+            this.textBox1.Size = new System.Drawing.Size(396, 20);
             this.textBox1.TabIndex = 27;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "OpenTabletDriver";
+            this.textBox1.Text = "OpenTabletDriver (Auto running process)";
             // 
             // textBox2
             // 
@@ -404,13 +405,28 @@
             this.OTD.Size = new System.Drawing.Size(321, 19);
             this.OTD.TabIndex = 32;
             // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("MS UI Gothic", 14F);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox4.Location = new System.Drawing.Point(27, 401);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(396, 19);
+            this.textBox4.TabIndex = 35;
+            this.textBox4.TabStop = false;
+            this.textBox4.Text = "* if path is empty, it is not working.";
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(522, 299);
+            this.ClientSize = new System.Drawing.Size(522, 295);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.OTD);
@@ -480,5 +496,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox OTD;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
