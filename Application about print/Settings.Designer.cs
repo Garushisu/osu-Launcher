@@ -48,10 +48,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.replay = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.OTD = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstName
             // 
+            this.firstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.firstName.Location = new System.Drawing.Point(67, 80);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(152, 19);
@@ -60,6 +69,7 @@
             // 
             // thirdName
             // 
+            this.thirdName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.thirdName.Location = new System.Drawing.Point(67, 243);
             this.thirdName.Name = "thirdName";
             this.thirdName.Size = new System.Drawing.Size(152, 19);
@@ -68,6 +78,7 @@
             // 
             // secondName
             // 
+            this.secondName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.secondName.Location = new System.Drawing.Point(67, 163);
             this.secondName.Name = "secondName";
             this.secondName.Size = new System.Drawing.Size(152, 19);
@@ -76,6 +87,7 @@
             // 
             // firstPath
             // 
+            this.firstPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.firstPath.Location = new System.Drawing.Point(67, 105);
             this.firstPath.Name = "firstPath";
             this.firstPath.Size = new System.Drawing.Size(321, 19);
@@ -84,6 +96,7 @@
             // 
             // secondPath
             // 
+            this.secondPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.secondPath.Location = new System.Drawing.Point(67, 188);
             this.secondPath.Name = "secondPath";
             this.secondPath.Size = new System.Drawing.Size(321, 19);
@@ -92,6 +105,7 @@
             // 
             // thirdPath
             // 
+            this.thirdPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             this.thirdPath.Location = new System.Drawing.Point(67, 268);
             this.thirdPath.Name = "thirdPath";
             this.thirdPath.Size = new System.Drawing.Size(321, 19);
@@ -100,8 +114,10 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox9.Location = new System.Drawing.Point(12, 217);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -112,8 +128,10 @@
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox7.Location = new System.Drawing.Point(12, 137);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -124,8 +142,10 @@
             // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox8.Location = new System.Drawing.Point(12, 54);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -136,8 +156,10 @@
             // 
             // textBox10
             // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox10.Location = new System.Drawing.Point(24, 12);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -149,8 +171,10 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox11.Location = new System.Drawing.Point(12, 105);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -164,8 +188,10 @@
             // 
             // textBox12
             // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox12.Location = new System.Drawing.Point(12, 79);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -179,8 +205,10 @@
             // 
             // textBox13
             // 
+            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox13.Location = new System.Drawing.Point(12, 162);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
@@ -193,8 +221,10 @@
             // 
             // textBox14
             // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox14.Location = new System.Drawing.Point(12, 191);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
@@ -207,8 +237,10 @@
             // 
             // textBox15
             // 
+            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox15.Location = new System.Drawing.Point(12, 242);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
@@ -222,8 +254,10 @@
             // 
             // textBox16
             // 
+            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox16.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.textBox16.Location = new System.Drawing.Point(12, 271);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
@@ -236,39 +270,155 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(394, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 23);
             this.button1.TabIndex = 24;
             this.button1.Text = "Blowse...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.path1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(394, 184);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 25;
             this.button2.Text = "Blowse...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.path2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(394, 264);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 23);
             this.button3.TabIndex = 26;
             this.button3.Text = "Blowse...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.path3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox1.Location = new System.Drawing.Point(12, 350);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(185, 20);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "OpenTabletDriver";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox2.Location = new System.Drawing.Point(12, 296);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 28;
+            this.textBox2.TabStop = false;
+            this.textBox2.Text = "Replay";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(394, 318);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(71, 23);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "Blowse...";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.replayPath_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox3.Location = new System.Drawing.Point(12, 325);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(49, 19);
+            this.textBox3.TabIndex = 30;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Path:";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // replay
+            // 
+            this.replay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.replay.Location = new System.Drawing.Point(67, 322);
+            this.replay.Name = "replay";
+            this.replay.Size = new System.Drawing.Size(321, 19);
+            this.replay.TabIndex = 29;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(394, 372);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(71, 23);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Blowse...";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.OTDPath_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox5.Location = new System.Drawing.Point(12, 379);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(49, 19);
+            this.textBox5.TabIndex = 33;
+            this.textBox5.TabStop = false;
+            this.textBox5.Text = "Path:";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // OTD
+            // 
+            this.OTD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.OTD.Location = new System.Drawing.Point(67, 376);
+            this.OTD.Name = "OTD";
+            this.OTD.Size = new System.Drawing.Size(321, 19);
+            this.OTD.TabIndex = 32;
             // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 312);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(522, 299);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.OTD);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.replay);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -294,6 +444,7 @@
             this.Name = "settings";
             this.Text = "Settings";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settings_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
             this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,5 +472,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox replay;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox OTD;
     }
 }

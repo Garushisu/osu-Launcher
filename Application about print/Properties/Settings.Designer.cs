@@ -94,5 +94,29 @@ namespace Application_about_print.Properties {
                 this["Path3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ReplayPath {
+            get {
+                return ((string)(this["ReplayPath"]));
+            }
+            set {
+                this["ReplayPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OTD {
+            get {
+                return ((string)(this["OTD"]));
+            }
+            set {
+                this["OTD"] = value;
+            }
+        }
     }
 }

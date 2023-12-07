@@ -56,6 +56,7 @@
             // 
             // third
             // 
+            this.third.Cursor = System.Windows.Forms.Cursors.Default;
             this.third.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.third.Location = new System.Drawing.Point(37, 340);
             this.third.Name = "third";
@@ -66,6 +67,7 @@
             // 
             // first
             // 
+            this.first.Cursor = System.Windows.Forms.Cursors.Default;
             this.first.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.first.Location = new System.Drawing.Point(37, 197);
             this.first.Name = "first";
@@ -76,6 +78,7 @@
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
             this.button3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(615, 370);
@@ -91,6 +94,7 @@
             // 
             this.replayMoves.AutoSize = true;
             this.replayMoves.BackColor = System.Drawing.Color.White;
+            this.replayMoves.Cursor = System.Windows.Forms.Cursors.Default;
             this.replayMoves.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.replayMoves.Location = new System.Drawing.Point(24, 37);
             this.replayMoves.Name = "replayMoves";
@@ -109,6 +113,7 @@
             // 
             // second
             // 
+            this.second.Cursor = System.Windows.Forms.Cursors.Default;
             this.second.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.second.Location = new System.Drawing.Point(37, 268);
             this.second.Name = "second";
@@ -121,6 +126,7 @@
             // 
             this.settingButton.BackgroundImage = global::Application_about_print.Properties.Resources._26565;
             this.settingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.settingButton.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.settingButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.settingButton.Location = new System.Drawing.Point(723, 12);
@@ -162,6 +168,7 @@
             this.Controls.Add(this.first);
             this.Controls.Add(this.third);
             this.Controls.Add(this.pictureBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

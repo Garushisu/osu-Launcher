@@ -13,17 +13,14 @@ namespace Application_about_print
 {
     public partial class settings : Form
     {
+        private static bool isFormOpen = false;
+
         public settings()
         {
             InitializeComponent();
 
-            Mutex app_mutex = new Mutex(false, "MYSOFTWARE_001");
+            isFormOpen = true;
 
-            if (app_mutex.WaitOne(0, false) == false)
-            {
-
-                return;
-            }
         }
 
 
@@ -40,6 +37,8 @@ namespace Application_about_print
             secondPath.Text = Properties.Settings.Default.Path2;
             thirdName.Text = Properties.Settings.Default.Name3;
             thirdPath.Text = Properties.Settings.Default.Path3;
+            replay.Text = Properties.Settings.Default.ReplayPath;
+            OTD.Text = Properties.Settings.Default.OTD;
             
 
         }
@@ -103,6 +102,8 @@ namespace Application_about_print
             Properties.Settings.Default.Path2 = secondPath.Text;
             Properties.Settings.Default.Name3 = thirdName.Text;
             Properties.Settings.Default.Path3 = thirdPath.Text;
+            Properties.Settings.Default.ReplayPath = replay.Text;
+            Properties.Settings.Default.OTD = OTD.Text;
             Properties.Settings.Default.Save();
 
         }
@@ -112,21 +113,80 @@ namespace Application_about_print
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Setting the exe file.";
             openFileDialog.Filter = "file (*.exe) | *.exe";
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            openFileDialog.DereferenceLinks = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                openFileDialog.FileName = firstPath.Text;
-                openFileDialog.FileName = Properties.Settings.Default.Path1;
+                string path = openFileDialog.FileName;
+                firstPath.Text = path;
+                path = Properties.Settings.Default.Path1;
             }
         }
 
         private void path2_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Setting the exe file.";
+            openFileDialog.Filter = "file (*.exe) | *.exe";
+            openFileDialog.DereferenceLinks = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog.FileName;
+                secondPath.Text = path;
+                path = Properties.Settings.Default.Path2;
+            }
         }
 
         private void path3_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Setting the exe file.";
+            openFileDialog.Filter = "file (*.exe) | *.exe";
+            openFileDialog.DereferenceLinks = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog.FileName;
+                thirdPath.Text = path;
+                path = Properties.Settings.Default.Path3;
+            }
+        }
 
+        private void replayPath_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "Select Replay folder.";
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                replay.Text = folderBrowserDialog.SelectedPath;
+                Properties.Settings.Default.ReplayPath = folderBrowserDialog.SelectedPath;
+                folderBrowserDialog.SelectedPath = Properties.Settings.Default.ReplayPath;
+
+                
+            }
+        }
+
+        private void OTDPath_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Setting the exe file.";
+            openFileDialog.Filter = "file (*.exe) | *.exe";
+            openFileDialog.DereferenceLinks = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog.FileName;
+                OTD.Text = path;
+                path = Properties.Settings.Default.OTD;
+            }
+        }
+
+        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            isFormOpen = false;
+        }
+
+        public static bool IsFormOpen()
+        {
+            return isFormOpen;
         }
     }
 }

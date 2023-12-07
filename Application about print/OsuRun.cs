@@ -24,34 +24,30 @@ namespace Application_about_print
 
         }
 
-        private async void mames_Click(object sender, EventArgs e)
-        {
-            ProcessStartInfo psi2 = new ProcessStartInfo("F:\\フォルダー\\akatsuki.exe");
-            Process.Start(psi2);
-
-            await Task.Delay(2000);
-
-            ProcessStartInfo psi = new ProcessStartInfo("C:\\Users\\akeno\\Desktop\\Apps\\!Mames Server.lnk");
-            Process.Start(psi);
-        }
-
-        public void official_Click(object sender, EventArgs e)
-        {
-            ProcessStartInfo psi = new ProcessStartInfo("G:\\osu!\\osu!.exe");
-            Process.Start(psi);
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("G:\\osu!\\Replays");
+            if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
+            {
+                System.Diagnostics.Process.Start(Properties.Settings.Default.ReplayPath);
+            } else
+            {
+                MessageBox.Show("Please define ReplayPath.");
+                if (!settings.IsFormOpen())
+                {
+                    settings myForm = new settings();
+                    myForm.Show();
+                }
+                else
+                {
+
+                }
+            }
+            
         }
 
         private void OsuRun_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
-            ProcessStartInfo psi = new ProcessStartInfo("F:\\フォルダー\\OpenTabletDriver.win-x64\\OpenTabletDriver.Daemon.exe");
-            Process.Start(psi);
 
             first.Text = Properties.Settings.Default.Name1;
             second.Text = Properties.Settings.Default.Name2;
@@ -90,53 +86,56 @@ namespace Application_about_print
 
         private void timer1_Tick(object sender, EventArgs e) // Enable を true にすると ループ してくれるs
         {
-            string replayFolder = System.Environment.CurrentDirectory = @"G:\osu!\Replays";
+            
+            string replayFolder = Properties.Settings.Default.ReplayPath;
+            
 
-            if (replayMoves.Checked == true)
+            if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
             {
-                string[] files = Directory.GetFiles(replayFolder);
-                foreach (string file in files)
+                if (replayMoves.Checked == true)
                 {
-                    try
+                    string[] files = Directory.GetFiles(replayFolder);
+                    foreach (string file in files)
                     {
-                        Process.Start(file);
+                        try
+                        {
+                            Process.Start(file);
 
-                        Thread.Sleep(2000);
+                            Thread.Sleep(2000);
 
-                        File.Delete(file);
+                            File.Delete(file);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("ファイルは存在しません。" + ex.Message);
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("ファイルは存在しません。" + ex.Message);
-                    }
+                }
+                else
+                {
                 }
             } else
             {
+               
             }
-        }
+                
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ProcessStartInfo psi = new ProcessStartInfo("C:\\Users\\akeno\\Desktop\\Apps\\!Mames Server.lnk");
-            Process.Start(psi);
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Save();
+            
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            settings settings = new settings();
-            settings.Show();
-            
-            
+            if (!settings.IsFormOpen())
+            {
+                settings myForm = new settings();
+                myForm.Show();
+            }
+            else
+            {
+                
+            }
+
+
         }
 
         private void reload_Click(object sender, EventArgs e)
