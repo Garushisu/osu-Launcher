@@ -16,7 +16,6 @@ namespace Application_about_print
 {
     public partial class OsuRun : Form
     {
-        private settings settingsInstance;
         public OsuRun()
         {
             InitializeComponent();
@@ -95,44 +94,43 @@ namespace Application_about_print
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e) // Enable を true にすると ループ してくれるs
+        private void timer1_Tick(object sender, EventArgs e) // Enable を true にすると ループ してくれる
         {
             
             string replayFolder = Properties.Settings.Default.ReplayPath;
-            
 
-            if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
-            {
-
-                settingsInstance = new settings();
-                settingsInstance.CheckBoxStateChanged += settings_CheckBoxStateChanged;
-
-                if (replayMoves.Checked == true)
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
                 {
-                    string[] files = Directory.GetFiles(replayFolder);
-                    foreach (string file in files)
+                    if (replayMoves.Checked == true)
                     {
-                        try
+                        string[] files = Directory.GetFiles(replayFolder);
+                        foreach (string file in files)
                         {
-                            Process.Start(file);
+                            try
+                            {
+                                Process.Start(file);
 
-                            Thread.Sleep(2000);
+                                Thread.Sleep(2000);
 
-                            File.Delete(file);
+                                File.Delete(file);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("ファイルは存在しません。" + ex.Message);
+                            }
                         }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("ファイルは存在しません。" + ex.Message);
-                        }
+                    }
+                    else
+                    {
                     }
                 }
                 else
                 {
+
                 }
-            } else
-            {
-               
-            }
+            
+
+            
                 
 
             
