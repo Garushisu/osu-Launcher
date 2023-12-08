@@ -13,7 +13,13 @@ namespace Application_about_print
 {
     public partial class settings : Form
     {
+        public event EventHandler CheckBoxStateChanged;
+
         private static bool isFormOpen = false;
+        public bool CheckBoxChecked
+        {
+            get { return checkDelete.Checked; }
+        }
 
         public settings()
         {
@@ -187,6 +193,11 @@ namespace Application_about_print
         public static bool IsFormOpen()
         {
             return isFormOpen;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBoxStateChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

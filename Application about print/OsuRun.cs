@@ -16,6 +16,7 @@ namespace Application_about_print
 {
     public partial class OsuRun : Form
     {
+        private settings settingsInstance;
         public OsuRun()
         {
             InitializeComponent();
@@ -102,6 +103,10 @@ namespace Application_about_print
 
             if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
             {
+
+                settingsInstance = new settings();
+                settingsInstance.CheckBoxStateChanged += settings_CheckBoxStateChanged;
+
                 if (replayMoves.Checked == true)
                 {
                     string[] files = Directory.GetFiles(replayFolder);
