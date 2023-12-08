@@ -14,36 +14,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Application_about_print
 {
-    public partial class OsuRun : Form
+    public partial class osuLancher: Form
     {
-        private settings settingsInstance;
-        public OsuRun()
+        public osuLancher()
         {
             InitializeComponent();
 
             this.Load += OsuRun_Load;
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
-            {
-                System.Diagnostics.Process.Start(Properties.Settings.Default.ReplayPath);
-            } else
-            {
-                MessageBox.Show("Please define ReplayPath.");
-                if (!settings.IsFormOpen())
-                {
-                    settings myForm = new settings();
-                    myForm.Show();
-                }
-                else
-                {
-
-                }
-            }
-            
         }
 
         private void OsuRun_Load(object sender, EventArgs e)
@@ -93,49 +71,6 @@ namespace Application_about_print
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void timer1_Tick(object sender, EventArgs e) // Enable を true にすると ループ してくれるs
-        {
-            
-            string replayFolder = Properties.Settings.Default.ReplayPath;
-            
-
-            if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
-            {
-
-                settingsInstance = new settings();
-                settingsInstance.CheckBoxStateChanged += settings_CheckBoxStateChanged;
-
-                if (replayMoves.Checked == true)
-                {
-                    string[] files = Directory.GetFiles(replayFolder);
-                    foreach (string file in files)
-                    {
-                        try
-                        {
-                            Process.Start(file);
-
-                            Thread.Sleep(2000);
-
-                            File.Delete(file);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("ファイルは存在しません。" + ex.Message);
-                        }
-                    }
-                }
-                else
-                {
-                }
-            } else
-            {
-               
-            }
-                
-
-            
         }
 
         private void button1_Click_2(object sender, EventArgs e)

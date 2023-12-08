@@ -19,7 +19,7 @@ namespace Application_about_print
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OsuRun());
+            Application.Run(new osuLancher());
         }
     }
 }

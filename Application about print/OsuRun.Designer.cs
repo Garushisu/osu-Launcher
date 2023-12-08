@@ -1,6 +1,6 @@
 ﻿namespace Application_about_print
 {
-    partial class OsuRun
+    partial class osuLancher
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OsuRun));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(osuLancher));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.third = new System.Windows.Forms.Button();
             this.first = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.replayMoves = new System.Windows.Forms.CheckBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.second = new System.Windows.Forms.Button();
             this.settingButton = new System.Windows.Forms.Button();
             this.reload = new System.Windows.Forms.Button();
@@ -75,41 +71,6 @@
             this.first.TabIndex = 3;
             this.first.UseVisualStyleBackColor = true;
             this.first.Click += new System.EventHandler(this.first_Click);
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(615, 370);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(137, 49);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Replay";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // replayMoves
-            // 
-            this.replayMoves.AutoSize = true;
-            this.replayMoves.BackColor = System.Drawing.Color.White;
-            this.replayMoves.Cursor = System.Windows.Forms.Cursors.Default;
-            this.replayMoves.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.replayMoves.Location = new System.Drawing.Point(24, 37);
-            this.replayMoves.Name = "replayMoves";
-            this.replayMoves.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.replayMoves.Size = new System.Drawing.Size(210, 28);
-            this.replayMoves.TabIndex = 5;
-            this.replayMoves.Text = "Move Replay files";
-            this.replayMoves.UseVisualStyleBackColor = false;
-            this.replayMoves.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // second
             // 
@@ -152,7 +113,7 @@
             this.reload.Visible = false;
             this.reload.Click += new System.EventHandler(this.reload_Click);
             // 
-            // OsuRun
+            // osuLancher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,8 +124,6 @@
             this.Controls.Add(this.reload);
             this.Controls.Add(this.settingButton);
             this.Controls.Add(this.second);
-            this.Controls.Add(this.replayMoves);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.first);
             this.Controls.Add(this.third);
             this.Controls.Add(this.pictureBox1);
@@ -173,22 +132,18 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "OsuRun";
-            this.Text = "osu! loader";
+            this.Name = "osuLancher";
+            this.Text = "osu! Launcher";
             this.Activated += new System.EventHandler(this.reload_Click);
             this.Load += new System.EventHandler(this.OsuRun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox replayMoves;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button settingButton;
         private System.Windows.Forms.Button reload;
         public System.Windows.Forms.Button first;

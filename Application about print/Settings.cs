@@ -13,13 +13,8 @@ namespace Application_about_print
 {
     public partial class settings : Form
     {
-        public event EventHandler CheckBoxStateChanged;
 
         private static bool isFormOpen = false;
-        public bool CheckBoxChecked
-        {
-            get { return checkDelete.Checked; }
-        }
 
         public settings()
         {
@@ -31,7 +26,7 @@ namespace Application_about_print
 
 
 
-        OsuRun OsuRunInstance = new OsuRun();
+        osuLancher OsuRunInstance = new osuLancher();
 
         private void Settings_Load(object sender, EventArgs e)
         {
@@ -43,7 +38,6 @@ namespace Application_about_print
             secondPath.Text = Properties.Settings.Default.Path2;
             thirdName.Text = Properties.Settings.Default.Name3;
             thirdPath.Text = Properties.Settings.Default.Path3;
-            replay.Text = Properties.Settings.Default.ReplayPath;
             OTD.Text = Properties.Settings.Default.OTD;
             
 
@@ -108,7 +102,6 @@ namespace Application_about_print
             Properties.Settings.Default.Path2 = secondPath.Text;
             Properties.Settings.Default.Name3 = thirdName.Text;
             Properties.Settings.Default.Path3 = thirdPath.Text;
-            Properties.Settings.Default.ReplayPath = replay.Text;
             Properties.Settings.Default.OTD = OTD.Text;
             Properties.Settings.Default.Save();
 
@@ -163,7 +156,6 @@ namespace Application_about_print
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                replay.Text = folderBrowserDialog.SelectedPath;
                 Properties.Settings.Default.ReplayPath = folderBrowserDialog.SelectedPath;
                 folderBrowserDialog.SelectedPath = Properties.Settings.Default.ReplayPath;
 
@@ -197,7 +189,6 @@ namespace Application_about_print
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBoxStateChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

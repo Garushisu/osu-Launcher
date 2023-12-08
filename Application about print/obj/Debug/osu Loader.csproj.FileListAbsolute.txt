@@ -13,7 +13,6 @@ C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\A
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\Application about print.exe
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\Application about print.pdb
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Loader.csproj.AssemblyReference.cache
-C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Loader.csproj.SuggestedBindingRedirects.cache
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application_about_print.OsuRun.resources
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application_about_print.Properties.Resources.resources
 C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Loader.csproj.GenerateResource.cache
