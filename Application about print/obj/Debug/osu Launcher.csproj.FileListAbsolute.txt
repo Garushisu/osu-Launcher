@@ -1,0 +1,11 @@
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\Application about print.exe.config
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\Application about print.exe
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\bin\Debug\Application about print.pdb
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Launcher.csproj.AssemblyReference.cache
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application_about_print.settings.resources
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application_about_print.OsuRun.resources
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application_about_print.Properties.Resources.resources
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Launcher.csproj.GenerateResource.cache
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\osu Launcher.csproj.CoreCompileInputs.cache
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application about print.exe
+C:\Users\akeno\Documents\GitHub\osu-Launcher\Application about print\obj\Debug\Application about print.pdb

@@ -57,6 +57,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.OTD = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.checkPatch3 = new System.Windows.Forms.CheckBox();
+            this.checkPatch2 = new System.Windows.Forms.CheckBox();
+            this.checkPatch1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -419,12 +422,54 @@
             this.textBox4.TabStop = false;
             this.textBox4.Text = "* if path is empty, it is not working.";
             // 
+            // checkPatch3
+            // 
+            this.checkPatch3.AutoSize = true;
+            this.checkPatch3.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.checkPatch3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.checkPatch3.Location = new System.Drawing.Point(267, 242);
+            this.checkPatch3.Name = "checkPatch3";
+            this.checkPatch3.Size = new System.Drawing.Size(141, 20);
+            this.checkPatch3.TabIndex = 36;
+            this.checkPatch3.Text = "Run with patcher";
+            this.checkPatch3.UseVisualStyleBackColor = true;
+            this.checkPatch3.CheckedChanged += new System.EventHandler(this.checkPatch3_CheckedChanged);
+            // 
+            // checkPatch2
+            // 
+            this.checkPatch2.AutoSize = true;
+            this.checkPatch2.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.checkPatch2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.checkPatch2.Location = new System.Drawing.Point(267, 162);
+            this.checkPatch2.Name = "checkPatch2";
+            this.checkPatch2.Size = new System.Drawing.Size(141, 20);
+            this.checkPatch2.TabIndex = 37;
+            this.checkPatch2.Text = "Run with patcher";
+            this.checkPatch2.UseVisualStyleBackColor = true;
+            this.checkPatch2.CheckedChanged += new System.EventHandler(this.checkPatch2_CheckedChanged);
+            // 
+            // checkPatch1
+            // 
+            this.checkPatch1.AutoSize = true;
+            this.checkPatch1.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.checkPatch1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.checkPatch1.Location = new System.Drawing.Point(267, 79);
+            this.checkPatch1.Name = "checkPatch1";
+            this.checkPatch1.Size = new System.Drawing.Size(141, 20);
+            this.checkPatch1.TabIndex = 38;
+            this.checkPatch1.Text = "Run with patcher";
+            this.checkPatch1.UseVisualStyleBackColor = true;
+            this.checkPatch1.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(522, 488);
+            this.Controls.Add(this.checkPatch1);
+            this.Controls.Add(this.checkPatch2);
+            this.Controls.Add(this.checkPatch3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox5);
@@ -496,5 +541,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox OTD;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox checkPatch3;
+        private System.Windows.Forms.CheckBox checkPatch2;
+        private System.Windows.Forms.CheckBox checkPatch1;
     }
 }

@@ -16,6 +16,11 @@ namespace Application_about_print
 {
     public partial class OsuRun : Form
     {
+
+        private settings checkPatch1;
+        private settings checkPatch2;
+        private settings checkPatch3;
+
         public OsuRun()
         {
             InitializeComponent();
@@ -184,8 +189,15 @@ namespace Application_about_print
 
         private void first_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-            Process.Start(psi);
+            
+            if(checkPatch1.CheckPatch1Chenged)
+            {
+                ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                Process.Start(psi);
+            } else {
+                MessageBox.Show("You didnt checked");
+            }
+            
         }
 
         private void second_Click(object sender, EventArgs e)

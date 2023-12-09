@@ -14,6 +14,22 @@ namespace Application_about_print
     public partial class settings : Form
     {
 
+        public event EventHandler CheckBoxStateChenged;
+        public bool CheckPatch1Chenged
+        {
+            get { return checkPatch1.Checked; }
+        }
+
+        public bool CheckPatch2Chenged
+        {
+            get { return checkPatch2.Checked; }
+        }
+
+        public bool CheckPatch3Chenged
+        {
+            get { return checkPatch3.Checked; }
+        }
+
         private static bool isFormOpen = false;
 
         public settings()
@@ -190,8 +206,19 @@ namespace Application_about_print
             return isFormOpen;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
+            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void checkPatch2_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void checkPatch3_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
