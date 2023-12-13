@@ -17,15 +17,16 @@ namespace Application_about_print
     public partial class OsuRun : Form
     {
 
-        private settings checkPatch1;
-        private settings checkPatch2;
-        private settings checkPatch3;
-
         public OsuRun()
         {
             InitializeComponent();
 
             this.Load += OsuRun_Load;
+
+
+            Properties.Settings.Default.checkPath1 = false;
+            Properties.Settings.Default.checkPath2 = false;
+            Properties.Settings.Default.checkPath3 = false;
 
         }
 
@@ -189,19 +190,28 @@ namespace Application_about_print
 
         private void first_Click(object sender, EventArgs e)
         {
-            
-            if(checkPatch1.CheckPatch1Chenged)
+            bool checkPatch1Checked = Properties.Settings.Default.checkPath1;
+            if (checkPatch1Checked)
             {
                 ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                 Process.Start(psi);
             } else {
-                MessageBox.Show("You didnt checked");
+                MessageBox.Show(checkPatch1Checked.ToString());
             }
             
         }
 
+        //ProcessStartInfo psi2 = new ProcessStartInfo("F:\\フォルダー\\akatsuki.exe");
+        //Process.Start(psi2);
+
+            //await Task.Delay(2000);
+
+        //ProcessStartInfo psi = new ProcessStartInfo("C:\\Users\\akeno\\Desktop\\Apps\\!Mames Server.lnk");
+        //Process.Start(psi);
+
         private void second_Click(object sender, EventArgs e)
         {
+            
             ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
             Process.Start(psi);
         }

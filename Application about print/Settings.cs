@@ -14,22 +14,6 @@ namespace Application_about_print
     public partial class settings : Form
     {
 
-        public event EventHandler CheckBoxStateChenged;
-        public bool CheckPatch1Chenged
-        {
-            get { return checkPatch1.Checked; }
-        }
-
-        public bool CheckPatch2Chenged
-        {
-            get { return checkPatch2.Checked; }
-        }
-
-        public bool CheckPatch3Chenged
-        {
-            get { return checkPatch3.Checked; }
-        }
-
         private static bool isFormOpen = false;
 
         public settings()
@@ -56,7 +40,10 @@ namespace Application_about_print
             thirdPath.Text = Properties.Settings.Default.Path3;
             replay.Text = Properties.Settings.Default.ReplayPath;
             OTD.Text = Properties.Settings.Default.OTD;
-            
+            checkPatch1.Checked = Properties.Settings.Default.checkPath1;
+            checkPatch2.Checked = Properties.Settings.Default.checkPath2;
+            checkPatch3.Checked = Properties.Settings.Default.checkPath3;
+
 
         }
 
@@ -121,6 +108,9 @@ namespace Application_about_print
             Properties.Settings.Default.Path3 = thirdPath.Text;
             Properties.Settings.Default.ReplayPath = replay.Text;
             Properties.Settings.Default.OTD = OTD.Text;
+            Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
+            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
+            Properties.Settings.Default.checkPath3 = checkPatch3.Checked;
             Properties.Settings.Default.Save();
 
         }
@@ -206,19 +196,34 @@ namespace Application_about_print
             return isFormOpen;
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        public bool GetCheckPatch1State()
         {
-            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
+            return checkPatch1.Checked;
+        }
+
+        public bool GetCheckPatch2State()
+        {
+            return checkPatch2.Checked;
+        }
+
+        public bool GetCheckPatch3State()
+        {
+            return checkPatch3.Checked;
+        }
+
+        private void checkPatch1_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
         }
 
         private void checkPatch2_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
+            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
         }
 
         private void checkPatch3_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBoxStateChenged?.Invoke(this, EventArgs.Empty);
+            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
         }
     }
 }

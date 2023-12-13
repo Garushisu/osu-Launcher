@@ -427,7 +427,7 @@
             this.checkPatch3.AutoSize = true;
             this.checkPatch3.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             this.checkPatch3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.checkPatch3.Location = new System.Drawing.Point(267, 242);
+            this.checkPatch3.Location = new System.Drawing.Point(267, 243);
             this.checkPatch3.Name = "checkPatch3";
             this.checkPatch3.Size = new System.Drawing.Size(141, 20);
             this.checkPatch3.TabIndex = 36;
@@ -459,7 +459,7 @@
             this.checkPatch1.TabIndex = 38;
             this.checkPatch1.Text = "Run with patcher";
             this.checkPatch1.UseVisualStyleBackColor = true;
-            this.checkPatch1.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.checkPatch1.CheckedChanged += new System.EventHandler(this.checkPatch1_CheckedChanged);
             // 
             // settings
             // 
