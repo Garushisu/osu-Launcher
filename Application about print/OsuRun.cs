@@ -22,15 +22,9 @@ namespace Application_about_print
             InitializeComponent();
 
             this.Load += OsuRun_Load;
-
-
-            Properties.Settings.Default.checkPath1 = false;
-            Properties.Settings.Default.checkPath2 = false;
-            Properties.Settings.Default.checkPath3 = false;
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
             {
@@ -45,7 +39,6 @@ namespace Application_about_print
                 }
                 else
                 {
-
                 }
             }
             
@@ -188,15 +181,21 @@ namespace Application_about_print
             }
         }
 
-        private void first_Click(object sender, EventArgs e)
+        private async void first_Click(object sender, EventArgs e)
         {
             bool checkPatch1Checked = Properties.Settings.Default.checkPath1;
             if (checkPatch1Checked)
             {
+                ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                Process.Start(psi2);
+
+                    await Task.Delay(2000);
+
                 ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                 Process.Start(psi);
             } else {
-                MessageBox.Show(checkPatch1Checked.ToString());
+                ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                Process.Start(psi);
             }
             
         }
@@ -211,9 +210,15 @@ namespace Application_about_print
 
         private void second_Click(object sender, EventArgs e)
         {
-            
-            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
-            Process.Start(psi);
+            bool checkPatch2Checked = Properties.Settings.Default.checkPath2;
+            if (checkPatch2Checked)
+            {
+                MessageBox.Show(checkPatch2Checked.ToString());
+            }
+            else
+            {
+                MessageBox.Show(checkPatch2Checked.ToString());
+            }
         }
 
         private void third_Click(object sender, EventArgs e)

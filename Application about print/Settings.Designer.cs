@@ -60,6 +60,10 @@
             this.checkPatch3 = new System.Windows.Forms.CheckBox();
             this.checkPatch2 = new System.Windows.Forms.CheckBox();
             this.checkPatch1 = new System.Windows.Forms.CheckBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.patchPath = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -461,12 +465,65 @@
             this.checkPatch1.UseVisualStyleBackColor = true;
             this.checkPatch1.CheckedChanged += new System.EventHandler(this.checkPatch1_CheckedChanged);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Location = new System.Drawing.Point(394, 453);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(71, 23);
+            this.button6.TabIndex = 42;
+            this.button6.Text = "Blowse...";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox6.Location = new System.Drawing.Point(12, 460);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(49, 19);
+            this.textBox6.TabIndex = 41;
+            this.textBox6.TabStop = false;
+            this.textBox6.Text = "Path:";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // patchPath
+            // 
+            this.patchPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            this.patchPath.Location = new System.Drawing.Point(67, 457);
+            this.patchPath.Name = "patchPath";
+            this.patchPath.Size = new System.Drawing.Size(321, 19);
+            this.patchPath.TabIndex = 40;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.textBox18.Location = new System.Drawing.Point(12, 431);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.TabIndex = 39;
+            this.textBox18.TabStop = false;
+            this.textBox18.Text = "Patcher";
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(522, 488);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.patchPath);
+            this.Controls.Add(this.textBox18);
             this.Controls.Add(this.checkPatch1);
             this.Controls.Add(this.checkPatch2);
             this.Controls.Add(this.checkPatch3);
@@ -544,5 +601,9 @@
         private System.Windows.Forms.CheckBox checkPatch3;
         private System.Windows.Forms.CheckBox checkPatch2;
         private System.Windows.Forms.CheckBox checkPatch1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox patchPath;
+        private System.Windows.Forms.TextBox textBox18;
     }
 }

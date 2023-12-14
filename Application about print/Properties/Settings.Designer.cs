@@ -154,5 +154,17 @@ namespace Application_about_print.Properties {
                 this["checkPath3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string patchPath {
+            get {
+                return ((string)(this["patchPath"]));
+            }
+            set {
+                this["patchPath"] = value;
+            }
+        }
     }
 }

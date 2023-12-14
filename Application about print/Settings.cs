@@ -40,6 +40,7 @@ namespace Application_about_print
             thirdPath.Text = Properties.Settings.Default.Path3;
             replay.Text = Properties.Settings.Default.ReplayPath;
             OTD.Text = Properties.Settings.Default.OTD;
+            patchPath.Text = Properties.Settings.Default.patchPath;
             checkPatch1.Checked = Properties.Settings.Default.checkPath1;
             checkPatch2.Checked = Properties.Settings.Default.checkPath2;
             checkPatch3.Checked = Properties.Settings.Default.checkPath3;
@@ -108,6 +109,7 @@ namespace Application_about_print
             Properties.Settings.Default.Path3 = thirdPath.Text;
             Properties.Settings.Default.ReplayPath = replay.Text;
             Properties.Settings.Default.OTD = OTD.Text;
+            Properties.Settings.Default.patchPath = patchPath.Text;
             Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
             Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
             Properties.Settings.Default.checkPath3 = checkPatch3.Checked;
