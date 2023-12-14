@@ -14,7 +14,7 @@ Replayファイル関係のプログラムは、色々制約があるので外�
 
 今後分かりやすいように画像を張っていく予定です。
 
-#English
+# English
 
 This application allows you to save three osu paths (including private servers) and run them as a single application!
 
