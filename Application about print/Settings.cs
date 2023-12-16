@@ -177,14 +177,14 @@ namespace Application_about_print
         private void OTDPath_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Setting the exe file.";
+            openFileDialog.Title = "Select the exe file.";
             openFileDialog.Filter = "file (*.exe) | *.exe";
             openFileDialog.DereferenceLinks = false;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string path = openFileDialog.FileName;
                 OTD.Text = path;
-                path = Properties.Settings.Default.OTD;
+                Properties.Settings.Default.OTD = path;
             }
         }
 
@@ -226,6 +226,20 @@ namespace Application_about_print
         private void checkPatch3_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select the exe file.";
+            openFileDialog.Filter = "file (*.exe) | *.exe";
+            openFileDialog.DereferenceLinks = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog.FileName;
+                patchPath.Text = path;
+                Properties.Settings.Default.patchPath = path;
+            }
         }
     }
 }

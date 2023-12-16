@@ -139,15 +139,13 @@ namespace Application_about_print
         {
             if (!settings.IsFormOpen())
             {
-                settings myForm = new settings();
-                myForm.Show();
+                settings settings = new settings();
+                settings.Show();
             }
             else
             {
 
             }
-
-
         }
 
         private void reload_Click(object sender, EventArgs e)
@@ -184,95 +182,148 @@ namespace Application_about_print
         private async void first_Click(object sender, EventArgs e)
         {
             bool checkPatch1Checked = Properties.Settings.Default.checkPath1;
-            if (checkPatch1Checked)
+            
+
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path1))
             {
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                if (checkPatch1Checked)
                 {
-                    ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                    Process.Start(psi2);
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    {
+                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                        Process.Start(psi2);
 
-                    await Task.Delay(2000);
+                        await Task.Delay(2000);
 
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                    Process.Start(psi);
-                } else
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        Process.Start(psi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("You didn't setting Patcher's path, it'll run osu! without Patcher.");
+
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        Process.Start(psi);
+                    }
+
+                }
+                else
                 {
-                    MessageBox.Show("You didn't setting Patcher's path, it'll run osu! without Patcher.");
-
                     ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                     Process.Start(psi);
                 }
+            } 
+            else
+            {
+                MessageBox.Show("You must select osu!.exe(or server link).");
+                if (!settings.IsFormOpen())
+                {
+                    settings settings = new settings();
+                    settings.Show();
+                }
+                else
+                {
 
-            } else {
-                ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                Process.Start(psi);
+                }
             }
+            
 
         }
-
-        //ProcessStartInfo psi2 = new ProcessStartInfo("F:\\フォルダー\\akatsuki.exe");
-        //Process.Start(psi2);
-
-        //await Task.Delay(2000);
-
-        //ProcessStartInfo psi = new ProcessStartInfo("C:\\Users\\akeno\\Desktop\\Apps\\!Mames Server.lnk");
-        //Process.Start(psi);
 
         private async void second_Click(object sender, EventArgs e)
         {
             bool checkPatch2Checked = Properties.Settings.Default.checkPath2;
 
-            if (checkPatch2Checked)
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
             {
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                if (checkPatch2Checked)
                 {
-                    ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                    Process.Start(psi2);
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    {
+                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                        Process.Start(psi2);
 
-                    await Task.Delay(2000);
+                        await Task.Delay(2000);
 
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
-                    Process.Start(psi);
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                        Process.Start(psi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                        Process.Start(psi);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
-
                     ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
                     Process.Start(psi);
                 }
+            } 
+            else
+            {
+                MessageBox.Show("You must select osu!.exe(or server link).");
+                if (!settings.IsFormOpen())
+                {
+                    settings settings = new settings();
+                    settings.Show();
+                }
+                else
+                {
+
+                }
             }
+            
         }
 
         private async void third_Click(object sender, EventArgs e)
         {
             bool checkPath3Checked = Properties.Settings.Default.checkPath3;
 
-            if (checkPath3Checked)
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
             {
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                if (checkPath3Checked)
                 {
-                    ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                    Process.Start(psi2);
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    {
+                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                        Process.Start(psi2);
 
-                    await Task.Delay(2000);
+                        await Task.Delay(2000);
 
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
-                    Process.Start(psi);
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                        Process.Start(psi);
+                    }
+                    else
+                    {
+                        MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                        Process.Start(psi);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
-
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                     Process.Start(psi);
                 }
-            }
+            } 
             else
             {
-                ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                Process.Start(psi);
+                MessageBox.Show("You must select osu!.exe(or server link).");
+                if (!settings.IsFormOpen())
+                {
+                    settings settings = new settings();
+                    settings.Show();
+                }
+                else
+                {
+
+                }
             }
+            
         }
     } 
 }
