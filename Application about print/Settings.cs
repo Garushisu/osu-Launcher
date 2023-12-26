@@ -44,6 +44,7 @@ namespace Application_about_print
             checkPatch1.Checked = Properties.Settings.Default.checkPath1;
             checkPatch2.Checked = Properties.Settings.Default.checkPath2;
             checkPatch3.Checked = Properties.Settings.Default.checkPath3;
+            checkClose.Checked = Properties.Settings.Default.checkClose;
 
 
         }
@@ -113,6 +114,7 @@ namespace Application_about_print
             Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
             Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
             Properties.Settings.Default.checkPath3 = checkPatch3.Checked;
+            Properties.Settings.Default.checkClose = checkClose.Checked;
             Properties.Settings.Default.Save();
 
         }
@@ -198,21 +200,6 @@ namespace Application_about_print
             return isFormOpen;
         }
 
-        public bool GetCheckPatch1State()
-        {
-            return checkPatch1.Checked;
-        }
-
-        public bool GetCheckPatch2State()
-        {
-            return checkPatch2.Checked;
-        }
-
-        public bool GetCheckPatch3State()
-        {
-            return checkPatch3.Checked;
-        }
-
         private void checkPatch1_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
@@ -240,6 +227,11 @@ namespace Application_about_print
                 patchPath.Text = path;
                 Properties.Settings.Default.patchPath = path;
             }
+        }
+
+        private void checkClose_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.checkClose = checkClose.Checked;
         }
     }
 }

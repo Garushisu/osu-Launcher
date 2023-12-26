@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -182,50 +183,101 @@ namespace Application_about_print
         private async void first_Click(object sender, EventArgs e)
         {
             bool checkPatch1Checked = Properties.Settings.Default.checkPath1;
-            
+            bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path1))
+            if (checkCloseChecked)
             {
-                if (checkPatch1Checked)
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path1))
                 {
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    if (checkPatch1Checked)
                     {
-                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                        Process.Start(psi2);
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
 
-                        await Task.Delay(2000);
+                            await Task.Delay(2000);
 
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                        Process.Start(psi);
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't setting Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                            Process.Start(psi);
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("You didn't setting Patcher's path, it'll run osu! without Patcher.");
-
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                         Process.Start(psi);
                     }
-
                 }
                 else
                 {
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                    Process.Start(psi);
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
+
+                    }
                 }
-            } 
+                this.Close();
+            }
             else
             {
-                MessageBox.Show("You must select osu!.exe(or server link).");
-                if (!settings.IsFormOpen())
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path1))
                 {
-                    settings settings = new settings();
-                    settings.Show();
+                    if (checkPatch1Checked)
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
+
+                            await Task.Delay(2000);
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't setting Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                            Process.Start(psi);
+                        }
+
+                    }
+                    else
+                    {
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        Process.Start(psi);
+                    }
                 }
                 else
                 {
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
 
+                    }
                 }
             }
+
+            
             
 
         }
@@ -233,97 +285,197 @@ namespace Application_about_print
         private async void second_Click(object sender, EventArgs e)
         {
             bool checkPatch2Checked = Properties.Settings.Default.checkPath2;
+            bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
+            if (checkCloseChecked)
             {
-                if (checkPatch2Checked)
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
                 {
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    if (checkPatch2Checked)
                     {
-                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                        Process.Start(psi2);
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
 
-                        await Task.Delay(2000);
+                            await Task.Delay(2000);
 
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
-                        Process.Start(psi);
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                            Process.Start(psi);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
-
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
                         Process.Start(psi);
                     }
                 }
                 else
                 {
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
-                    Process.Start(psi);
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
+
+                    }
                 }
-            } 
+
+                this.Close();
+            }
             else
             {
-                MessageBox.Show("You must select osu!.exe(or server link).");
-                if (!settings.IsFormOpen())
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
                 {
-                    settings settings = new settings();
-                    settings.Show();
+                    if (checkPatch2Checked)
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
+
+                            await Task.Delay(2000);
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                            Process.Start(psi);
+                        }
+                    }
+                    else
+                    {
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
+                        Process.Start(psi);
+                    }
                 }
                 else
                 {
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
 
+                    }
                 }
             }
+            
             
         }
 
         private async void third_Click(object sender, EventArgs e)
         {
             bool checkPath3Checked = Properties.Settings.Default.checkPath3;
+            bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
+            if (checkCloseChecked)
             {
-                if (checkPath3Checked)
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
                 {
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                    if (checkPath3Checked)
                     {
-                        ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
-                        Process.Start(psi2);
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
 
-                        await Task.Delay(2000);
+                            await Task.Delay(2000);
 
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
-                        Process.Start(psi);
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                            Process.Start(psi);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
-
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
                         Process.Start(psi);
                     }
                 }
                 else
                 {
-                    ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
-                    Process.Start(psi);
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
+
+                    }
                 }
-            } 
+
+                this.Close();
+            }
             else
             {
-                MessageBox.Show("You must select osu!.exe(or server link).");
-                if (!settings.IsFormOpen())
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
                 {
-                    settings settings = new settings();
-                    settings.Show();
+                    if (checkPath3Checked)
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.patchPath))
+                        {
+                            ProcessStartInfo psi2 = new ProcessStartInfo(Properties.Settings.Default.patchPath);
+                            Process.Start(psi2);
+
+                            await Task.Delay(2000);
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                            Process.Start(psi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("You didn't set Patcher's path, it'll run osu! without Patcher.");
+
+                            ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
+                            Process.Start(psi);
+                        }
+                    }
+                    else
+                    {
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        Process.Start(psi);
+                    }
                 }
                 else
                 {
+                    MessageBox.Show("You must select osu!.exe(or server link).");
+                    if (!settings.IsFormOpen())
+                    {
+                        settings settings = new settings();
+                        settings.Show();
+                    }
+                    else
+                    {
 
+                    }
                 }
             }
-            
         }
     } 
 }
