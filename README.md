@@ -16,6 +16,9 @@ Replayファイル関係のプログラムは、色々制約があるので外�
 
 ![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/6464875a-fe32-471b-9baa-4d37f76c69f2)
 
+![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/b9b9fad3-e341-4562-be39-83bc7936f774)
+
+
 
 # English
 
@@ -34,3 +37,4 @@ I plan to put up images for clarity in the future.
 
 ![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/545689cc-75f9-422c-91ec-601b27b6a57f)
 
+![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/71b4a48e-9c72-4a75-9958-2b5dbf7dad04)
