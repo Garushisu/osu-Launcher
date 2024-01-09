@@ -14,6 +14,9 @@ Replayファイル関係のプログラムは、色々制約があるので外�
 
 今後分かりやすいように画像を張っていく予定です。
 
+![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/6464875a-fe32-471b-9baa-4d37f76c69f2)
+
+
 # English
 
 This application allows you to save three osu paths (including private servers) and run them as a single application!
@@ -28,3 +31,6 @@ I have removed the Replay file related program because of various restrictions. 
 If you click on the gear symbol, you will get a form to specify the PATH.
 
 I plan to put up images for clarity in the future.
+
+![image](https://github.com/Garushisu/osu-Launcher/assets/81414243/545689cc-75f9-422c-91ec-601b27b6a57f)
+
