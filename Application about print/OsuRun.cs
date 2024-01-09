@@ -24,53 +24,7 @@ namespace Application_about_print
 
             this.Load += OsuRun_Load;
 
-            string folderPath = "ここにフォルダーパスを入力";
-
-            DateTime lastRunTime = GetLastRunTime();
-            var newFiles = GetNewFiles(folderPath, lastRunTime);
-
-            foreach (var file in newFiles)
-            {
-                Console.WriteLine($"新しいファイル: {file}");
-                // ここでファイルを読み込むなどの処理を行う
-            }
-
-            SaveCurrentTime();
         }
-
-        /// <summary>
-        /// 大分難しそうなので、実装は困難かな
-        /// </summary>
-        static DateTime GetLastRunTime()
-        {
-            // 前回の実行時刻を取得するロジックを実装
-            // 例えば、ファイルやデータベースに保存している時刻などを使用
-            // ここでは仮の値を返しています
-            return DateTime.Now.AddDays(-1);
-        }
-
-        static void SaveCurrentTime()
-        {
-            // 現在の時刻を保存するロジックを実装
-            // 例えば、ファイルやデータベースに保存するなど
-        }
-
-        static string[] GetNewFiles(string folderPath, DateTime lastRunTime)
-        {
-            DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
-
-            // 前回の実行時刻以降に変更されたファイルを取得
-            var newFiles = directoryInfo.GetFiles()
-                .Where(file => file.LastWriteTime > lastRunTime)
-                .Select(file => file.FullName)
-                .ToArray();
-
-            return newFiles;
-        }
-
-    /// <summary>
-    /// 
-    /// </summary>
 
     private void button3_Click(object sender, EventArgs e)
         {
