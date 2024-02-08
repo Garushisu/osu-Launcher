@@ -413,7 +413,7 @@ namespace Application_about_print
                     }
                     else
                     {
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
                         Process.Start(psi);
                     }
                 }
@@ -459,7 +459,7 @@ namespace Application_about_print
                     }
                     else
                     {
-                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path1);
+                        ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
                         Process.Start(psi);
                     }
                 }
