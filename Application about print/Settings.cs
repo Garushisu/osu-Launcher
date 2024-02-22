@@ -40,10 +40,6 @@ namespace Application_about_print
             thirdPath.Text = Properties.Settings.Default.Path3;
             replay.Text = Properties.Settings.Default.ReplayPath;
             OTD.Text = Properties.Settings.Default.OTD;
-            patchPath.Text = Properties.Settings.Default.patchPath;
-            checkPatch1.Checked = Properties.Settings.Default.checkPath1;
-            checkPatch2.Checked = Properties.Settings.Default.checkPath2;
-            checkPatch3.Checked = Properties.Settings.Default.checkPath3;
             checkClose.Checked = Properties.Settings.Default.checkClose;
 
 
@@ -110,10 +106,6 @@ namespace Application_about_print
             Properties.Settings.Default.Path3 = thirdPath.Text;
             Properties.Settings.Default.ReplayPath = replay.Text;
             Properties.Settings.Default.OTD = OTD.Text;
-            Properties.Settings.Default.patchPath = patchPath.Text;
-            Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
-            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
-            Properties.Settings.Default.checkPath3 = checkPatch3.Checked;
             Properties.Settings.Default.checkClose = checkClose.Checked;
             Properties.Settings.Default.Save();
 
@@ -198,35 +190,6 @@ namespace Application_about_print
         public static bool IsFormOpen()
         {
             return isFormOpen;
-        }
-
-        private void checkPatch1_CheckedChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.checkPath1 = checkPatch1.Checked;
-        }
-
-        private void checkPatch2_CheckedChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
-        }
-
-        private void checkPatch3_CheckedChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.checkPath2 = checkPatch2.Checked;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Select the exe file.";
-            openFileDialog.Filter = "file (*.exe) | *.exe";
-            openFileDialog.DereferenceLinks = false;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string path = openFileDialog.FileName;
-                patchPath.Text = path;
-                Properties.Settings.Default.patchPath = path;
-            }
         }
 
         private void checkClose_CheckedChanged(object sender, EventArgs e)
