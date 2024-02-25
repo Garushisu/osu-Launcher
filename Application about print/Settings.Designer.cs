@@ -59,6 +59,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkClose = new System.Windows.Forms.CheckBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
+            this.OTDDisable = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -473,22 +474,46 @@
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox17.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+<<<<<<< Updated upstream
             this.textBox17.Location = new System.Drawing.Point(329, 852);
             this.textBox17.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
             this.textBox17.Size = new System.Drawing.Size(507, 30);
+=======
+            this.textBox17.Location = new System.Drawing.Point(74, 442);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(366, 15);
+>>>>>>> Stashed changes
             this.textBox17.TabIndex = 44;
             this.textBox17.TabStop = false;
-            this.textBox17.Text = "Developed by Garushisu";
+            this.textBox17.Text = "Developed by Mamestagram Discord Moderator";
             this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OTDDisable
+            // 
+            this.OTDDisable.AutoSize = true;
+            this.OTDDisable.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.OTDDisable.ForeColor = System.Drawing.Color.White;
+            this.OTDDisable.Location = new System.Drawing.Point(404, 351);
+            this.OTDDisable.Name = "OTDDisable";
+            this.OTDDisable.Size = new System.Drawing.Size(73, 20);
+            this.OTDDisable.TabIndex = 45;
+            this.OTDDisable.Text = "Disable";
+            this.OTDDisable.UseVisualStyleBackColor = true;
             // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1131, 888);
+=======
+            this.ClientSize = new System.Drawing.Size(522, 458);
+            this.Controls.Add(this.OTDDisable);
+>>>>>>> Stashed changes
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.checkClose);
             this.Controls.Add(this.textBox4);
@@ -565,5 +590,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.CheckBox checkClose;
         private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.CheckBox OTDDisable;
     }
 }
