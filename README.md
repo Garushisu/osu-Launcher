@@ -1,7 +1,7 @@
 # osu-Launcher
 
 
-注意！！：Replayに関する機能は使用方法を誤ると**ファイルを永久的に失う**可能性があるため使用する際は十分に注意してください。
+注意！！：	Replayに関する機能は使用方法を誤ると**`ff0000`ファイルを永久的に失う**`fff`可能性があるため使用する際は十分に注意してください。
 		詳細は[こちら](https://github.com/Garushisu/osu-Launcher/releases/tag/1.2.0)をご覧ください。
 
 このアプリを使うと３つのosuのpath(プライベートサーバーも含め）を保存してひとつのアプリケーションとして実行可能にします！
@@ -25,7 +25,7 @@ Replayファイル関係のプログラムは、色々制約があるので外�
 
 # English
 
-Caution!!: Please be very careful when **using the Replay function**, as it can cause **permanent loss of files** if used incorrectly.
+Caution!!: Please be very careful when **`ff0000`using the Replay function**`fff`, as it can cause **`ff0000`permanent loss of files**`fff` if used incorrectly.
 		See [here](https://github.com/Garushisu/osu-Launcher/releases/tag/1.2.0) for more information.
 
 This application allows you to save three osu paths (including private servers) and run them as a single application!
