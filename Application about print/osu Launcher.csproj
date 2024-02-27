@@ -95,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon1.ico" />
-    <Content Include="Resources\osu!Launcher_Starting_Animation.gif" />
+    <None Include="Resources\osu!Launcher_Starting_Animation.gif" />
     <None Include="Resources\BGImage.png" />
     <None Include="Resources\reload1.png" />
     <None Include="Resources\reload.png" />

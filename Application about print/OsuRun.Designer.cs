@@ -157,7 +157,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::Application_about_print.Properties.Resources.osu_Launcher_Starting_Animation;
+            this.pictureBox2.Image = global::Application_about_print.Properties.Resources.osu_Launcher_Starting_Animation1;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(764, 431);

@@ -112,7 +112,7 @@ namespace Application_about_print
             if (!gifPlayed)
             {
                 gifPlayed = true;
-                await Task.Delay(3000);
+                await Task.Delay(4700);
                 pictureBox2.Visible = false;
             }
 
