@@ -40,10 +40,7 @@ namespace Application_about_print
             thirdPath.Text = Properties.Settings.Default.Path3;
             replay.Text = Properties.Settings.Default.ReplayPath;
             OTD.Text = Properties.Settings.Default.OTD;
-<<<<<<< Updated upstream
-=======
             OTDDisable.Checked = Properties.Settings.Default.OTDDisable;
->>>>>>> Stashed changes
             checkClose.Checked = Properties.Settings.Default.checkClose;
 
 
@@ -110,10 +107,7 @@ namespace Application_about_print
             Properties.Settings.Default.Path3 = thirdPath.Text;
             Properties.Settings.Default.ReplayPath = replay.Text;
             Properties.Settings.Default.OTD = OTD.Text;
-<<<<<<< Updated upstream
-=======
             Properties.Settings.Default.OTDDisable = OTDDisable.Checked;
->>>>>>> Stashed changes
             Properties.Settings.Default.checkClose = checkClose.Checked;
             Properties.Settings.Default.Save();
 

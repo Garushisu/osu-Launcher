@@ -26,7 +26,22 @@ namespace Application_about_print
 
         }
 
-    private void button3_Click(object sender, EventArgs e)
+        public class ResourcePathHelper
+        {
+            public static string GetResourcePath(string resourceName)
+            {
+                // アプリケーションが実行されているディレクトリのパスを取得
+                string appDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+                // Resources フォルダ内のファイルへの相対パスを作成
+                string resourcePath = Path.Combine(appDirectory, "Resources", resourceName);
+
+                return resourcePath;
+            }
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(Properties.Settings.Default.ReplayPath))
             {
@@ -46,7 +61,8 @@ namespace Application_about_print
 
         }
 
-        private void OsuRun_Load(object sender, EventArgs e)
+        private bool gifPlayed = false;
+        private async void OsuRun_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
@@ -91,9 +107,21 @@ namespace Application_about_print
             {
                 
             }
-            
 
+            // GifAnimation
+            if (!gifPlayed)
+            {
+                gifPlayed = true;
+                await Task.Delay(3000);
+                pictureBox2.Visible = false;
+            }
 
+            pictureBox2.Click += pictureBox2_Click;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Visible = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -129,18 +157,13 @@ namespace Application_about_print
                 }
                 else
                 {
+
                 }
             }
             else
             {
 
             }
-
-
-
-
-
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
