@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\osurun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\application about print\\osurun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\osurun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|c:\\users\\akeno\\documents\\github\\osu-launcher\\application about print\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{E4B8B358-FE63-4EA5-A84A-54319655E165}|Application about print\\osu Launcher.csproj|solutionrelative:application about print\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\Application about print\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "Application about print\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\Application about print\\Properties\\Settings.settings",
+              "RelativeToolTip": "Application about print\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2024-03-12T02:21:57.32Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,14 +52,14 @@
               "RelativeDocumentMoniker": "Application about print\\OsuRun.cs",
               "ToolTip": "C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\Application about print\\OsuRun.cs",
               "RelativeToolTip": "Application about print\\OsuRun.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAADwv1sAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T06:10:22.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Settings.cs",
               "DocumentMoniker": "C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\Application about print\\Settings.cs",
               "RelativeDocumentMoniker": "Application about print\\Settings.cs",
@@ -56,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OsuRun.cs [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Users\\akeno\\Documents\\GitHub\\osu-Launcher\\Application about print\\OsuRun.cs",
               "RelativeDocumentMoniker": "Application about print\\OsuRun.cs",
