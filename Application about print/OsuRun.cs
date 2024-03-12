@@ -212,7 +212,6 @@ namespace Application_about_print
 
         private void first_Click(object sender, EventArgs e)
         {
-            bool checkPatch1Checked = Properties.Settings.Default.checkPath1;
             bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
             if (checkCloseChecked)
@@ -266,18 +265,14 @@ namespace Application_about_print
 
         private void second_Click(object sender, EventArgs e)
         {
-            bool checkPatch2Checked = Properties.Settings.Default.checkPath2;
             bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
             if (checkCloseChecked)
             {
                 if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
                 {
-                    if (checkPatch2Checked)
-                    {
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
                         Process.Start(psi);
-                    }
                 }
                 else
                 {
@@ -299,11 +294,8 @@ namespace Application_about_print
             {
                 if (!string.IsNullOrEmpty(Properties.Settings.Default.Path2))
                 {
-                    if (checkPatch2Checked)
-                    {
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path2);
                         Process.Start(psi);
-                    }
                 }
                 else
                 {
@@ -325,18 +317,14 @@ namespace Application_about_print
 
         private void third_Click(object sender, EventArgs e)
         {
-            bool checkPath3Checked = Properties.Settings.Default.checkPath3;
             bool checkCloseChecked = Properties.Settings.Default.checkClose;
 
             if (checkCloseChecked)
             {
                 if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
                 {
-                    if (checkPath3Checked)
-                    {
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
                         Process.Start(psi);
-                    }
                 }
                 else
                 {
@@ -358,11 +346,8 @@ namespace Application_about_print
             {
                 if (!string.IsNullOrEmpty(Properties.Settings.Default.Path3))
                 {
-                    if (checkPath3Checked)
-                    {
                         ProcessStartInfo psi = new ProcessStartInfo(Properties.Settings.Default.Path3);
                         Process.Start(psi);
-                    }
                 }
                 else
                 {
